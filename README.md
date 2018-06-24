@@ -48,8 +48,11 @@ GFWList地址 "/etc/dnsforwarer/base-gfwlist.txt"
 # 解压下载好的 SDK
 tar xjf OpenWrt-SDK-ar71xx-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2
 cd OpenWrt-SDK-ar71xx-*
+# 安装必要的包
+./scripts/feeds update base
+./scripts/feeds install nettle
 # Clone 项目
-git clone https://github.com/AlexZhuo/openwrt-dnsforwarder/ package/dnsforwarder
+git clone https://github.com/starP-W/openwrt-dnsforwarder/ package/dnsforwarder
 # 编译 po2lmo (如果有po2lmo可跳过)
 pushd package/dnsforwarder/tools/po2lmo
 make && sudo make install
