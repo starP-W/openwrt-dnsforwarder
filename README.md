@@ -57,7 +57,7 @@ git clone https://github.com/starP-W/openwrt-dnsforwarder/ package/dnsforwarder
 pushd package/dnsforwarder/tools/po2lmo
 make && sudo make install
 popd
-# 选择要编译的包 Network -> dnsforwarder
+# 选择要编译的包 Alex -> dnsforwarder
 make menuconfig
 # 开始编译
 make package/dnsforwarder/compile V=99
